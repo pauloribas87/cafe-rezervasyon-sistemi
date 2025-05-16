@@ -1,0 +1,74 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Rezervasyon - Fatih Tutak</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="images/mamma mia yeni.png" alt="Mamma Mia Logo" class="logo">
+    </div>
+
+    <div class="steps">
+        <span class="step active">
+          <img src="images/takvim.png" alt="Tarih" class="ikon"> Tarih
+        </span>
+        <span class="step">
+          <img src="images/saat.png" alt="Saat" class="ikon"> Saat
+        </span>
+        <span class="step">
+          <img src="images/indir.png" alt="Misafir" class="ikon"> Misafir
+        </span>
+        <span class="step">
+          <img src="images/tik.jpeg" alt="Tamamla" class="ikon"> Tamamla
+        </span>
+      </div>
+      
+
+    <div class="step-content active" id="step-1">
+      <h2>Lütfen rezervasyon tarihini seçin</h2>
+      <div class="takvim-baslik" id="takvimBaslik"></div>
+      <div class="takvim-nav">
+        <button id="oncekiAy">‹</button>
+        <button id="sonrakiAy">›</button>
+      </div>
+      <div class="takvim-gunler" id="takvimGunler"></div>
+      <p id="seciliTarih"></p>
+      <button onclick="ileri(1)">İleri</button>
+    </div>
+
+    <div class="step-content" id="step-2">
+      <h2>Rezervasyon saati seçin</h2>
+      <select id="saat">
+        <option>18:00</option>
+        <option>19:00</option>
+        <option>20:00</option>
+        <option>21:00</option>
+        <option>22:00</option>
+      </select>
+      <button onclick="ileri(2)">İleri</button>
+    </div>
+
+    <div class="step-content" id="step-3">
+      <h2>Misafir Bilgileri</h2>
+      <input type="text" id="ad" placeholder="Adınız Soyadınız"><br>
+      <input type="text" id="telefon" placeholder="Telefon Numaranız"><br>
+      <input type="email" id="email" placeholder="E-posta Adresiniz"><br>
+      <input type="number" id="kisi" placeholder="Kişi Sayısı"><br>
+      <button onclick="ileri(3)">İleri</button>
+    </div>
+
+    <div class="step-content" id="step-4">
+      <h2>Rezervasyon Özeti</h2>
+      <div id="ozet"></div>
+      
+    </div>
+
+    <p id="mesaj"></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
