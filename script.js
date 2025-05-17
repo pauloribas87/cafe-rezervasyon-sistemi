@@ -81,8 +81,7 @@ function ileri(adim) {
     const kisi = document.getElementById("kisi").value;
     const telefon = document.getElementById("telefon").value;
     const email = document.getElementById("email").value;
-    const adres = document.getElementById("adres").value;
-    if (!ad.trim() || !kisi || !telefon.trim() || !email.trim() || !adres.trim()) {
+    if (!ad.trim() || !kisi || !telefon.trim() || !email.trim()) {
       alert("Lütfen tüm bilgileri doldurun.");
       return;
     }
@@ -110,9 +109,7 @@ function tamamla() {
   const kisi = document.getElementById("kisi").value;
   const telefon = document.getElementById("telefon").value;
   const email = document.getElementById("email").value;
-  const adres = document.getElementById("adres").value;
-
-  const rezervasyon = { tarih: secilenTarih, saat, ad, kisi, telefon, email, adres };
+  const rezervasyon = { tarih: secilenTarih, saat, ad, kisi, telefon, email,};
   let kayitlar = JSON.parse(localStorage.getItem("rezervasyonlar")) || [];
   kayitlar.push(rezervasyon);
   localStorage.setItem("rezervasyonlar", JSON.stringify(kayitlar));
@@ -124,7 +121,6 @@ function tamamla() {
     <p><strong>Kişi Sayısı:</strong> ${kisi}</p>
     <p><strong>Telefon:</strong> ${telefon}</p>
     <p><strong>E-posta:</strong> ${email}</p>
-    <p><strong>Adres:</strong> ${adres}</p>
     <p style="color: green; font-weight: bold; margin-top: 20px;">✅ Rezervasyon Onaylandı</p>
   `;
 
@@ -147,7 +143,6 @@ function yenidenBasla() {
   document.getElementById("kisi").value = "";
   document.getElementById("telefon").value = "";
   document.getElementById("email").value = "";
-  document.getElementById("adres").value = "";
   document.getElementById("seciliTarih").textContent = "";
   secilenTarih = null;
 
